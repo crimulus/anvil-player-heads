@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "headrename",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Head Rename Mod",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
-    "Me!"
+    "LukeGrahamLandry"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://moddingtutorials.org/commissions",
+    "sources": "https://github.com/LukeGrahamLandry/head-rename-mod"
   },
 
   "license": "CC0-1.0",
@@ -19,20 +19,16 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "ca.lukegrahamlandry.headrename.ModMain"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "headrename.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.14.6",
-    "fabric": "*",
     "minecraft": "~1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }

@@ -1,9 +1,7 @@
-# Fabric Example Mod
+# Head Rename Mod
 
-## Setup
-
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Allows you to change a player head's skin by renaming it in the anvil.
 
 ## License
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Head Rename Mod is available under the CC0 license. Do whatever you want with it. 

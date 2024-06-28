@@ -1,6 +1,8 @@
-# Head Rename Mod
+# Minecraft Anvil Player Heads Mod
 
-Allows you to change a player head's skin by renaming it in the anvil.
+Originally built by @LukeGrahamLandry.
+
+Allows you to change a player head's skin by renaming it in an anvil.
 
 ## License
 

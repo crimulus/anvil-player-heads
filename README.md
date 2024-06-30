@@ -6,4 +6,4 @@ Allows you to change a player head's skin by renaming it in an anvil.
 
 ## License
 
-Head Rename Mod is available under the CC0 license. Do whatever you want with it. 
+Anvil Player Heads mod is available under the CC0 license. Do whatever you want with it. 

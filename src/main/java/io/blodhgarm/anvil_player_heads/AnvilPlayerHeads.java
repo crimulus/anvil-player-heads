@@ -2,6 +2,7 @@ package io.blodhgarm.anvil_player_heads;
 
 import com.mojang.authlib.GameProfile;
 import io.blodhgarm.anvil_player_heads.mixin.AnvilScreenHandlerAccessor;
+import io.blodhgarm.anvil_player_heads.mixin.SkullBlockEntityAccessor;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.block.entity.SkullBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -34,13 +35,7 @@ public class AnvilPlayerHeads implements ModInitializer {
 
         ENTITY_ID_TO_LOOKUP_NAME.put(playerId, playerName);
 
-        var startingProfile = new GameProfile(null, playerName);
-
-        SkullBlockEntity.loadProperties(startingProfile, possibleProfile -> {
-            if(possibleProfile == startingProfile || !possibleProfile.isComplete()) possibleProfile = null;
-
-            var gameProfile = Optional.ofNullable(possibleProfile);
-
+        SkullBlockEntityAccessor.aph$fetchProfile(playerName).thenAcceptAsync(gameProfile -> {
             if(!ENTITY_ID_TO_LOOKUP_NAME.containsKey(playerId) || !ENTITY_ID_TO_LOOKUP_NAME.get(playerId).equals(playerName)) return;
 
             serverPlayer.server.executeSync(() -> {
@@ -68,11 +63,9 @@ public class AnvilPlayerHeads implements ModInitializer {
         var nbt = output.getOrCreateNbt();
 
         if (bl) {
-            nbt.put("SkullOwner", NbtHelper.writeGameProfile(new NbtCompound(), profile.get()));
+            nbt.putString("SkullOwner", profile.get().getName());
 
             ((AnvilScreenHandlerAccessor) anvilScreenHandler).aph$getLevelCost().set(1);
-        } else {
-            nbt.remove("SkullOwner");
         }
 
         output.setNbt(nbt);

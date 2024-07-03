@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.blodhgarm.anvil_player_heads.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AnvilScreenHandlerAccessor",
+    "AnvilScreenHandlerMixin",
+    "SkullBlockEntityAccessor"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

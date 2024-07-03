@@ -1,34 +1,34 @@
 {
-  "schemaVersion": 1,
-  "id": "headrename",
-  "version": "${version}",
-
-  "name": "Head Rename Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
-  "authors": [
-    "LukeGrahamLandry"
-  ],
-  "contact": {
-    "homepage": "https://moddingtutorials.org/commissions",
-    "sources": "https://github.com/LukeGrahamLandry/head-rename-mod"
-  },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "ca.lukegrahamlandry.headrename.ModMain"
-    ]
-  },
-  "mixins": [
-    "headrename.mixins.json"
-  ],
-
-  "depends": {
-    "fabricloader": ">=0.14.6",
-    "minecraft": "~1.19",
-    "java": ">=17"
-  }
+	"schemaVersion": 1,
+	"id": "anvil_player_heads",
+	"version": "${version}",
+	"name": "Anvil Player Heads",
+	"description": "Mod allowing for the ablity to name heads within Anvils allowing for Player heads to be adjusted based on the passed username!",
+	"authors": [
+		"LukeGrahamLandry"
+	],
+	"contributors": [
+		"blodgharm",
+		"crimulus"
+	],
+	"contact": {
+		"sources": "https://github.com/Dragon-Seeker/anvil-player-heads"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/anvil_player_heads/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.blodhgarm.anvil_player_heads.AnvilPlayerHeads"
+		]
+	},
+	"mixins": [
+		"anvil_player_heads.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
 }

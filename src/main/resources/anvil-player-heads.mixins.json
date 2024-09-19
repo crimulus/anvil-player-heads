@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.crimulus.anvil_player_heads.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"AnvilScreenHandlerAccessor",
+		"AnvilScreenHandlerMixin",
+		"SkullBlockEntityAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

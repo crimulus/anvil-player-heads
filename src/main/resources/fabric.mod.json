@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "anvil-player-heads",
+	"version": "${version}",
+	"name": "Anvil Player Heads",
+	"description": "This mod changes a player head item to the corresponding player's skin when named in an anvil.",
+	"authors": [
+		"LukeGrahamLandry",
+		"blodhgarm",
+		"crimulus"
+	],
+	"contact": {
+		"sources": "https://github.com/crimulus/anvil-player-heads"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/anvil-player-heads/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.crimulus.anvil_player_heads.AnvilPlayerHeads"
+		]
+	},
+	"mixins": [
+		"anvil-player-heads.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
